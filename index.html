@@ -62,21 +62,20 @@
       font-weight: 700;
       text-decoration: none;
     }
+    .btn.secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid rgba(148,163,184,.25);
+    }
     .media {
       aspect-ratio: 16 / 9;
       background: #020617;
       border-radius: 16px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 16px;
-      border: 1px solid rgba(148,163,184,.1);
-    }
-    .media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      border: 1px dashed rgba(148,163,184,.25);
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      margin-bottom: 10px;
     }
     footer { padding: 30px 20px 60px; text-align: center; color: var(--muted); }
   </style>
@@ -90,36 +89,36 @@
 </div>
 
 <header>
-  <h1 data-fr="The Forest – Jeu Vidéo Officiel" data-es="The Forest – Videojuego Oficial" data-en="The Forest – Official Video Game">The Forest – Jeu Vidéo Oficial</h1>
+  <h1 data-fr="The Forest – Jeu Vidéo Officiel" data-es="The Forest – Videojuego Oficial" data-en="The Forest – Official Video Game">The Forest – Jeu Vidéo Officiel</h1>
   <p data-fr="Bienvenue sur le site officiel de The Forest. Télécharge le jeu complet (2,5 Go)."
      data-es="Bienvenido al sitio oficial de The Forest. Descarga el juego completo (2,5 GB)."
      data-en="Welcome to the official The Forest website. Download the full game (2.5 GB).">
-     Bienvenido al sitio oficial de The Forest. Descarga el juego completo (2,5 GB).
+     Bienvenue sur le site officiel de PP. Télécharge le jeu complet (2,5 Go).
   </p>
 </header>
 
 <main class="container">
   <section class="grid">
     <div class="card">
-      <div class="media">
-        <img src="Capture d’écran 2026-01-30 215136.png" alt="The Forest Gameplay">
-      </div>
-      <h2 data-fr="À propos du jeu" data-es="Sobre el juego" data-en="About the game">Sobre el juego</h2>
+      <div class="media"><img src="Capture d’écran 2026-01-30 215136.png" alt="Capture d’écran du jeu The Forest" style="width:100%;height:100%;object-fit:cover;border-radius:16px;"></div>
+      <h2 data-fr="À propos du jeu" data-es="Sobre el juego" data-en="About the game">À propos du jeu</h2>
       <p data-fr="The Forest est un jeu indépendant développé par Rafael Alexander Gutierrez Ruiz dans le cadre du Projet Personnel du IB."
          data-es="The Forest es un videojuego independiente desarrollado por Rafael Alexander Gutierrez Ruiz como parte del Proyecto Personal del IB."
          data-en="The Forest is an indie game developed by Rafael Alexander Gutierrez Ruiz as part of the IB Personal Project.">
-         The Forest es un videojuego independiente desarrollado por Rafael Alexander Gutierrez Ruiz como parte del Proyecto Personal del IB.
+         The Forest est un jeu indépendant développé par Rafael Alexander Gutierrez Ruiz dans le cadre du Projet Personnel du IB.
       </p>
     </div>
 
+    
+
     <div class="card">
-      <h2 data-fr="Téléchargement" data-es="Descarga" data-en="Download">Descarga</h2>
+      <h2 data-fr="Téléchargement" data-es="Descarga" data-en="Download">Téléchargement</h2>
       <p data-fr="Taille du jeu : 2,5 Go • Fichier .zip"
          data-es="Tamaño del juego: 2,5 GB • Archivo .zip"
          data-en="Game size: 2.5 GB • .zip file">
-         Tamaño del juego: 2,5 GB • Archivo .zip
+         Taille du jeu : 2,5 Go • Fichier .zip
       </p>
-      <a class="btn" href="https://drive.google.com/uc?export=download&id=1-sNdzWMHbkRXDa6xsCw0hVc00vIaXJdA" data-fr="Télécharger (Windows)" data-es="Descargar (Windows)" data-en="Download (Windows)">Descargar (Windows)</a>
+      <a class="btn" href="https://drive.google.com/uc?export=download&id=1-sNdzWMHbkRXDa6xsCw0hVc00vIaXJdA" data-fr="Télécharger (Windows)" data-es="Descargar (Windows)" data-en="Download (Windows)">Télécharger (Windows)</a>
     </div>
   </section>
 </main>
