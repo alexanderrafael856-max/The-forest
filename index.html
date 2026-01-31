@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Forest – Jeu Vidéo Officiel</title>
+  <meta name="description" content="Site officiel du jeu vidéo PP. Téléchargement, bande-annonce et informations." />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #020617;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, #0b1220, transparent), var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header { padding: 64px 20px; text-align: center; }
+    header h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 12px; }
+    header p { color: var(--muted); max-width: 720px; margin: 0 auto; }
+    .lang {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+    }
+    .lang button {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid rgba(148,163,184,.3);
+      padding: 6px 10px;
+      margin-left: 6px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: linear-gradient(180deg, rgba(56,189,248,.08), transparent 40%), var(--card);
+      border: 1px solid rgba(148,163,184,.15);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    .card h2 { margin-bottom: 8px; }
+    .card p { color: var(--muted); }
+    .btn {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #38bdf8, #22d3ee);
+      color: #020617;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .btn.secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid rgba(148,163,184,.25);
+    }
+    .media {
+      aspect-ratio: 16 / 9;
+      background: #020617;
+      border-radius: 16px;
+      border: 1px dashed rgba(148,163,184,.25);
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    footer { padding: 30px 20px 60px; text-align: center; color: var(--muted); }
+  </style>
+</head>
+<body>
+
+<div class="lang">
+  <button onclick="setLang('fr')">FR</button>
+  <button onclick="setLang('es')">ES</button>
+  <button onclick="setLang('en')">EN</button>
+</div>
+
+<header>
+  <h1 data-fr="The Forest – Jeu Vidéo Officiel" data-es="The Forest – Videojuego Oficial" data-en="The Forest – Official Video Game">The Forest – Jeu Vidéo Officiel</h1>
+  <p data-fr="Bienvenue sur le site officiel de The Forest. Télécharge le jeu complet (2,5 Go)."
+     data-es="Bienvenido al sitio oficial de The Forest. Descarga el juego completo (2,5 GB)."
+     data-en="Welcome to the official The Forest website. Download the full game (2.5 GB).">
+     Bienvenue sur le site officiel de PP. Télécharge le jeu complet (2,5 Go).
+  </p>
+</header>
+
+<main class="container">
+  <section class="grid">
+    <div class="card">
+      <div class="media">Image / GIF</div>
+      <h2 data-fr="À propos du jeu" data-es="Sobre el juego" data-en="About the game">À propos du jeu</h2>
+      <p data-fr="The Forest est un jeu indépendant développé par Rafael Alexander Gutierrez Ruiz dans le cadre du Projet Personnel du IB."
+         data-es="The Forest es un videojuego independiente desarrollado por Rafael Alexander Gutierrez Ruiz como parte del Proyecto Personal del IB."
+         data-en="The Forest is an indie game developed by Rafael Alexander Gutierrez Ruiz as part of the IB Personal Project.">
+         The Forest est un jeu indépendant développé par Rafael Alexander Gutierrez Ruiz dans le cadre du Projet Personnel du IB.
+      </p>
+    </div>
+
+    
+
+    <div class="card">
+      <h2 data-fr="Téléchargement" data-es="Descarga" data-en="Download">Téléchargement</h2>
+      <p data-fr="Taille du jeu : 2,5 Go • Fichier .zip"
+         data-es="Tamaño del juego: 2,5 GB • Archivo .zip"
+         data-en="Game size: 2.5 GB • .zip file">
+         Taille du jeu : 2,5 Go • Fichier .zip
+      </p>
+      <a class="btn" href="https://drive.google.com/uc?export=download&id=1JAP5HnqR-Mp6xmeVgAmTCk3D21soAx57" data-fr="Télécharger (Windows)" data-es="Descargar (Windows)" data-en="Download (Windows)">Télécharger (Windows)</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 – The Forest · Développé par Rafael Alexander Gutierrez Ruiz · Alex</p>
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('[data-fr]').forEach(el => {
+      el.textContent = el.dataset[lang];
+    });
+    document.documentElement.lang = lang;
+  }
+</script>
+
+</body>
+</html>
